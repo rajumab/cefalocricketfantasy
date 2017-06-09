@@ -1,0 +1,1351 @@
+.team-header {
+    background-image: url("https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/header-bg.png");
+    background-size: cover;
+    padding: 15px 0px;
+    height: 107px;
+    margin-bottom: 15px;
+}
+.squad-wrapper {
+	background: #fff;
+	padding: 10px 0;
+	margin-bottom: 15px;
+}
+.current-squad {
+	padding: 50px 0px;
+	padding-top: 20px;
+	text-align: center;
+}
+.player-card{
+	width: 167px;
+    height: 185px;
+	border: 1px solid #ddd;
+	box-shadow: 0px 0px 2px 1px #ddd;
+	display: inline-block;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,f4f4f4+57,f7f7f7+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 0%, #f4f4f4 57%, #f7f7f7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 0%,#f4f4f4 57%,#f7f7f7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #ffffff 0%,#ffffff 0%,#f4f4f4 57%,#f7f7f7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	overflow: hidden;
+	text-align: left;
+	margin: 10px;
+}
+.player-img {
+	display: inline-block;
+	width: 90px !important;
+	height: 100px !important;
+	background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/cardbg.png);
+	background-repeat: no-repeat;
+	margin: 5px 0px 0px 5px;
+	position: relative;
+}
+.player-img img{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+    left: 0;
+}
+.player-card ul{
+	display: inline-block;
+	vertical-align: top;
+	width: 67px;
+	text-align: center;
+	margin-left: -3px;
+}
+.player-card li{
+	width: 100%;
+	padding: 6px 0;
+	height: 40px;
+}
+.player-card ul li:nth-child(2){
+	border: solid #ddd;
+	border-width: 1px 0 1px 0;
+}
+.player-card li span{
+	display: inline-block;
+}
+.player-img.dd,
+.player-img.DD{
+	background-position: 0px -160px;
+}
+.player-img.gl,
+.player-img.GL{
+	background-position: 0px -320px;
+}
+.player-img.kkr,
+.player-img.KKR{
+	background-position: 0px -640px;
+}
+.player-img.kxip,
+.player-img.KXIP{
+	background-position: 0px -960px;
+	    background-size: auto;
+}
+.player-img.mi,
+.player-img.MI{
+	background-position: 0px -800px;
+}
+.player-img.rcb,
+.player-img.RCB{
+	background-position: 0px 0px;
+}
+.player-img.rps,
+.player-img.RPS{
+	background-position: 0px -1120px;
+}
+.player-img.srh,
+.player-img.SRH{
+	background-position: 0px -480px;
+}
+.player-card .player-name{
+	background: #e4e4e4;
+	padding: 5px;
+	text-align: center;
+}
+.player-card .player-value{
+	text-align: center;
+	padding: 6px;
+}
+
+.player-card.powerplayer .player-name{
+	background: #b80909;
+	color: #fff;
+}
+
+/*Table header background*/
+.points-history{
+	background: #fff;
+}
+.points-history .table thead tr {
+	background-color: #000000;
+}
+.points-history .fixed-table-inner{
+	height: 434px;
+}
+
+@media screen and (max-width: 1024px){
+	.current-squad{
+		padding: 10px;
+	}
+	.player-card{
+		width: 133px;
+		height: 150px;
+		margin: 5px;
+	}
+	.player-img {
+		width: 60px !important;
+		height: 60px !important;
+		margin: 15px 0px 5px 10px;
+	}
+	.player-card ul {
+		width: 60px;
+	}
+	.player-card li {
+		width: 100%;
+		padding: 4px 0;
+		height: 30px;
+		font-size: 11px;
+	}
+}
+@media screen and (max-width: 991px){
+	.points-history .table-section{
+		padding-bottom: 0px;
+		height: auto !important;
+	}
+	.badges {
+		height: auto !important;
+	}
+	.badge-wrapper{
+		margin-top: 15px;
+	}
+	body.fantacy-body {
+		padding-bottom: 0px;
+	}
+}
+
+
+
+/*Extra*/
+.btn[disabled] {
+    /* don't let button block mouse events from reaching wrapper */
+    pointer-events: none;
+}
+
+save-btn.disabled {
+    cursor: not-allowed;
+}
+
+.powerplay-active {
+    background-color: #ed3434 !important;
+}
+
+.table-section .table tbody tr.powerplay-active td {
+    color: #fff;
+}
+
+
+/*sno alignment*/
+
+.PadAlign {
+    padding-left: 17px !important;
+}
+
+.sort-price {
+    cursor: pointer;
+}
+
+
+/*table section*/
+
+.table-section {
+    background-color: #fff;
+    overflow: auto;
+    margin-top: 0px;
+    position: relative;
+}
+
+.fixed-table-inner {
+    height: 570px;
+    overflow: auto;
+}
+
+.table-section .table thead tr {
+    background-color: #1c4fa2;
+    color: #fff;
+    font-size: 13px;
+    font-family: ALINIB;
+    text-transform: uppercase;
+}
+
+.table-section .table thead tr th {
+    border-bottom: none;
+}
+
+.table-section .table tbody tr td {
+    font-family: ALINSN;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: capitalize;
+    height: 40px;
+    vertical-align: middle;
+    /*border-top: none;*/
+}
+
+.table-hover {
+    /*margin-top: -34px;*/
+}
+
+
+/*roll*/
+
+.allrounder-active,
+.allrounder,
+.batsman-active,
+.batsman,
+.bowler-active,
+.bowler,
+.foreign-active,
+.foreign,
+.keeper-active,
+.keeper,
+.uncapped-active,
+.uncapped {
+    max-width: 100%;
+    background-size: 30px;
+    background-image: url('https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/roles_icons_sprite.png');
+    display: inline-block;
+    width: 22px;
+    height: 24px;
+    position: relative;
+    vertical-align: top;
+    opacity: 0.9;
+    vertical-align: middle;
+}
+.keeper-active,
+.keeper {
+    width: 35px;
+}
+
+.powerplay-active .allrounder,
+.powerplayer .allrounder,
+.allrounder-active {
+    background-position: 0 0%;
+    /*background-size: 100%;*/
+}
+
+.allrounder {
+    background-position: 0 9.090909%;
+    /*background-size: 100%;*/
+}
+
+.powerplay-active .batsman,
+.powerplayer .batsman,
+.batsman-active {
+    background-position: 0 18.181818%;
+    /*background-size: 100%;*/
+}
+
+.batsman {
+    background-position: 0 27.272727%;
+    /*background-size: 100%;*/
+}
+
+.powerplay-active .bowler,
+.powerplayer .bowler,
+.bowler-active {
+    background-position: 0 36.363636%;
+    /*background-size: 100%;*/
+}
+
+.bowler {
+    background-position: 0 45.454545%;
+    /*background-size: 100%;*/
+}
+
+.powerplay-active .foreign,
+.powerplayer .foreign,
+.foreign-active {
+    background-position: 0 54.545455%;
+    /*background-size: 100%;*/
+}
+
+.foreign {
+    background-position: 0 63.636364%;
+    /*background-size: 100%;*/
+}
+
+.powerplay-active .keeper,
+.powerplayer .keeper,
+.keeper-active {
+    background-position: 0 72.727273%;
+    background-size: 35px;
+}
+
+.keeper {
+    background-position: 0 81.818182%;
+    background-size: 35px;
+}
+
+.powerplay-active .uncapped,
+.powerplayer .uncapped,
+.uncapped-active {
+    background-position: 0 90.909091%;
+    /*background-size: 100%;*/
+}
+
+.uncapped {
+    background-position: 0 100%;
+    /*background-size: 100%;*/
+}
+
+
+/*action*/
+
+.close-active,
+.close-icon,
+.plus-active,
+.plus {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url('https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/action.png');
+    display: inline-block;
+    width: 16px;
+    height: 19px;
+    position: relative;
+    vertical-align: top;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.close-active {
+    background-position: 0 0%;
+    background-size: 100%;
+}
+
+.close-icon {
+    /*background-position: 0 33%;
+    background-size: 100%;*/
+    background-position: 0 0%;
+    background-size: 100%;
+}
+
+.plus-active {
+    background-position: 0 65.666667%;
+    background-size: 100%;
+}
+
+.plus {
+    /*background-position: 0 99%;
+    background-size: 100%;*/
+    background-position: 0 65.666667%;
+    background-size: 100%;
+}
+
+
+/*add and delete action*/
+
+.action-close:hover .close-icon {
+    background-position: 0 0%;
+    background-size: 100%;
+}
+
+.powerplay-active .action-close .close-icon {
+    background-position: 0 0%;
+}
+
+.action-add:hover .plus {
+    background-position: 0 65.666667%;
+    background-size: 100%;
+}
+
+
+/*team*/
+
+.flag {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url('https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/team.png');
+    display: inline-block;
+    width: 29px;
+    height: 16px;
+    position: relative;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+
+.flag.dd { background-position: 0 0%; background-size: 100%; }
+.flag.gl { background-position: 0 12.456747%; background-size: 100%; }
+.flag.kkr { background-position: 0 24.913495%; background-size: 100%; }
+.flag.kxip { background-position: 0 37.370242%; background-size: 100%; }
+.flag.mi { background-position: 0 49.82699%; background-size: 100%; }
+.flag.tbd { background-position: 0 62.5%; background-size: 100%; }
+.flag.rcb { background-position: 0 75.086505%; background-size: 100%; }
+.flag.rps { background-position: 0 87.543253%; background-size: 100%; }
+.flag.srh { background-position: 0 100%; background-size: 100%; }
+
+/*table fixed css*/
+
+.duplicate-table {
+    background-color: #1c4fa2;
+    color: #fff;
+    font-size: 13px;
+    font-family: ALINIB;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 999;
+    margin-bottom: 0px;
+}
+
+.dropdown-share img {
+    cursor: pointer;
+}
+
+.duplicate-table>thead>tr>th {
+    border-bottom: none;
+}
+@media screen and (max-width: 520px) {
+    .allrounder-active,
+    .allrounder,
+    .batsman-active,
+    .batsman,
+    .bowler-active,
+    .bowler,
+    .foreign-active,
+    .foreign,
+    .keeper-active,
+    .keeper,
+    .uncapped-active,
+    .uncapped {
+        width: 22px;
+        height: 22px;
+        background-size: 31px;
+    }
+    .table>thead:first-child>tr:first-child>th {
+        font-size: 11px;
+    }
+    .table-section .table tbody tr td {
+        font-size: 11px;
+    }
+    .keeper-active,
+    .keeper {
+        width: 30px;
+    }
+    .powerplay-active .keeper, .powerplayer .keeper, .keeper-active{
+        background-size: 31px;
+    }
+    .table-section .table thead tr th ,
+    .table-section .table tbody tr td {
+        padding: 10px 5px;
+    }
+}
+
+.header-background {
+    background-color: #1c4fa2;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.th-inner {
+    position: absolute;
+    top: 3px;
+    line-height: 30px;
+    text-align: left;
+    z-index: 9999;
+}
+
+.league-label{
+    vertical-align: middle !important;
+}
+.league-popup {
+    width: 300px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0px 2px 4px 1px #ddd;
+}
+
+.league-popup:before {
+    content: '';
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 15px solid #fff;
+    position: absolute;
+    top: -14px;
+    right: 15px;
+    display: none;
+}
+
+.league-popup .user-details .user-team-name {
+    font-size: 18px;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.league-popup .user-details .user-name,
+.league-popup .user-details .user-team-status {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.league-popup .user-details label {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.league-popup .user-team-points {
+    color: #1c4fa2 !important;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.leaguepop-code {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.leaguepop-footer {
+    margin: 16px 0 8px;
+}
+
+.leaguepop-footer .SocialMediaShareButton {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.copy-url {
+    cursor: pointer
+}
+
+.copied-notify {
+    position: absolute;
+    bottom: 23px;
+    background: #d7d7d7;
+    padding: 2px 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.78);
+    line-height: 1.5;
+    z-index: 999;
+}
+
+
+/*Legend Popup*/
+
+.legend-popup {
+    background: #f7f7f7;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: ALINSN;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 0px 2px 1px #eaeaea;
+    max-width: 200px;
+    text-align: center;
+}
+
+.legend-popup span {
+    color: #000;
+    text-transform: uppercase;
+}
+
+.legend-popup:before {
+    content: '';
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 15px solid #f7f7f7;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    margin-left: -15px;
+}
+@media screen and (max-width: 767px){
+    .league-logo{
+        width: 27%;
+    }
+    .league-label .user-team-name{
+        font-size: 18px !important;
+    }
+    .team-img{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 640px) {
+    .league-popup .user-details {
+        margin-top: 0;
+    }
+
+    .league-popup {
+        width: 100%;
+        padding: 10px;
+    }
+    .league-popup .user-details .user-team-name {
+        font-size: 18px;
+        width: 120px;
+    }
+    .league-popup .user-details .user-name {
+        width: 120px;
+    }
+    .league-popup .user-details .user-team-status {
+        width: 130px;
+    }
+    .league-popup .btn-theme {
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+    .leaguepop-code {
+        font-size: 16px;
+    }
+    .dropdown-tab .dropdown-btn {
+        padding: 0px 5px;
+        font-size: 11px;
+    }
+}
+.playersadded-list label{
+   font-family: ALINSN;
+   font-size: 13px;
+   background-color: #1c4fa2;
+   height: 24px;
+   border-radius: 100%;
+   width: 24px;
+   text-align: center;
+   color: #fff;
+   padding: 3px 0px;
+   margin-right: 5px;
+}
+.playersadded-list{
+   position: relative;
+   top: 10px;
+}
+
+
+/*team logo*/
+.team-img{
+    display: inline-block;
+}
+.team{
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    top: 20px;
+}
+.team.dd{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/dd.png);
+}
+.team.gl{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/gl.png);
+}
+.team.kkr{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/kkr.png);
+}
+.team.kxip{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/kxip.png);
+}
+.team.mi{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/mi.png);
+}
+.team.rcb{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/rcb.png);
+}
+.team.rps{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/rps.png);
+}
+.team.srh{
+    background: url(https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/team/srh.png);
+}
+/*css fixes 11*/
+.pos-sa .user-img .emblem.team{
+    position: static !important;
+}
+
+/* Row Style1*/
+
+/*Font Regular*/
+
+@font-face {
+    font-family: ALINSN;
+    src: url('../fonts/ALINSN_.ttf')
+}
+
+
+/*Font SemiBold*/
+
+@font-face {
+    font-family: ALINSB;
+    src: url('../fonts/ALINSB_.ttf')
+}
+
+
+/*Font Bold*/
+
+@font-face {
+    font-family: ALINIB;
+    src: url('../fonts/ALINIB_.ttf')
+}
+
+.cplace {
+    cursor: pointer ! important
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+/*commmon css*/
+
+body {
+    font-synthesis: none;
+    -moz-font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F2F4F6;
+}
+
+::-webkit-input-placeholder {
+    color: #000;
+    font-family: ALINSN;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+::-moz-placeholder {
+    color: #000;
+    font-family: ALINSN;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.pad0 {
+    padding: 0px;
+}
+
+.padl0 {
+    padding-left: 0px;
+}
+
+.padr0 {
+    padding-right: 0px;
+}
+
+
+/*header*/
+
+#header-section img {
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+}
+
+.locked-img {
+    position: relative;
+    top: -2px;
+}
+
+
+/*main wrapper*/
+
+body.fantacy-body {
+    background: url("https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/bg2.jpg");
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-bottom: 60px;
+}
+
+.body-section {
+    background-color: #000;
+    /*margin: 0px 90px;*/
+    padding: 15px 15px;
+}
+
+.mshow {
+    display: none;
+}
+
+.mhide {
+    display: block !important;
+}
+
+.edit-btn {
+    display: none !important;
+}
+.help-home{
+    position: relative;
+    top: 2px;
+}
+.help-home a.dropdown-toggle{
+     font-family: ALINSB;
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #fff !important;
+}
+.help-home ul li a{
+    font-family: ALINSB;
+    color: #000 !important;
+}
+/*league icons*/
+
+.addperson,
+.create-league,
+.fantasy-league,
+.fantasy-team,
+.dailychallenge {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url('https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/league.png');
+    display: inline-block;
+    width: 130px;
+    height: 100px;
+}
+
+.addperson {
+    background-position: 0 0%;
+    background-size: 100%;
+}
+
+.create-league {
+    background-position: 0 31.637168%;
+    background-size: 131.034483%;
+}
+
+.fantasy-league {
+    background-position: 0 57.261411%;
+    background-size: 138.686131%;
+    height: 78px;
+}
+
+.fantasy-team {
+    background-position: 0 78.630705%;
+    background-size: 138.686131%;
+    height: 78px;
+}
+
+.dailychallenge {
+    background-position: 0 100%;
+    background-size: 138.686131%;
+    width: 130px;
+    height: 80px;
+}
+
+.back-option {
+    display: none;
+    padding: 0px 10px 0px 10px;
+}
+
+.back-table {
+    display: none;
+}
+
+.squad-member {
+    background-color: #d5d5d5 !important;
+}
+
+
+/*live score tab*/
+
+.tab-section {
+    clear: both;
+}
+
+.live-score-tab {
+    display: none;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.score-holder .t-img span {
+    display: inline-block;
+    width: 100px;
+    height: 90px;
+    background: url('https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/live-team.png');
+    background-repeat: repeat;
+    text-indent: -9999px;
+    background-size: 194%;
+}
+
+.score-holder .t-img.rcb span,
+.score-holder .t-img.RCB span {
+    background-position: 3px 6px;
+}
+
+.score-holder .t-img.dd span,
+.score-holder .t-img.DD span {
+    background-position: -280px -337px;
+}
+
+.score-holder .t-img.gl span,
+.score-holder .t-img.GL span {
+    background-position: -190px -82px;
+}
+
+.score-holder .t-img.srh span,
+.score-holder .t-img.SRH span {
+    background-position: -276px -80px;
+}
+
+.score-holder .t-img.kxip span,
+.score-holder .t-img.KXIP span {
+    background-position: -190px -170px;
+}
+
+.score-holder .t-img.mi span,
+.score-holder .t-img.MI span {
+    background-position: -280px -163px;
+}
+
+.score-holder .t-img.rps span,
+.score-holder .t-img.RPS span {
+    background-position: 5px -600px;
+}
+
+.score-holder .t-img.kkr span,
+.score-holder .t-img.KKR span {
+    background-position: -280px -603px;
+}
+
+.live-score-tab li {
+    display: inline-block;
+    color: #fff;
+    width: 49%;
+    padding: 8px 0px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.live-score-tab li a {
+    color: #fff;
+}
+
+.live-score-tab li.active {
+    border-bottom: 2px solid #fff;
+}
+
+.mhideinline {
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.mshowinline {
+    display: none;
+}
+
+.modal-backdrop.in {
+    opacity: .8;
+    z-index: 9999;
+}
+
+/*live score empty*/
+#empty-score{
+    background-color: #fff;
+}
+.emptyScore-section{
+    padding: 50px 0px;
+}
+.emptyScore-section label{
+    font-family: ALINSB;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(171, 32, 32);
+}
+/*Forgot Password Button*/
+.forgot-button{
+    margin: 0 auto;
+    display: block;
+}
+/*Email Verification*/
+.verified-msg{
+    text-align: center;
+    background: #293375;
+    height: 60px;
+    font-size: 17px;
+    padding-top: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    position: relative;
+}
+.verified-msg img{
+    margin-right: 15px;
+    margin-top: -5px;
+}
+.verified-msg a{
+    text-decoration: underline;
+    color: #fff;
+}
+.verified-msg .close-notify{
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 13px;
+    top: 18px;
+}
+.testclass{
+    display: none !important;
+}
+.share-links{
+   padding: 0px 0px;
+}
+.share-links ul li{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 10px;
+    border-right: 1px solid #e8e8e8;
+    height: 35px;
+}
+.share-links ul li:last-child{
+    margin-right: -1px;
+}
+.share-links ul li:first-child img{
+    margin-top: 5px;
+}
+.leagueCode-section .copied-notify {
+    bottom: -10px;
+    left: 0px;
+}
+.back-align{
+   padding: 10px 15px;
+}
+.terms-error{
+    position: relative;
+    top: 0px;
+    margin-left: 0px;
+}
+.sharecursor{
+    margin-left: 5px;
+}
+.share-data ul li,
+.sharecursor{
+    cursor: pointer;
+}
+.Loader-img{
+    padding: 30px 0px;
+}
+.Loader-img img{
+    width: 50px;
+}
+.loaderWrapper{
+    position: relative;
+    width: 100%;
+    /*height: 100vh;*/
+    /*background-color: #000;*/
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 999999;
+    text-align: center;
+}
+.loader img{
+    width: 60px;
+    margin-top: 2%;
+}
+.dropdown.disabled{
+    cursor: not-allowed;
+}
+.delete-img,
+.ok-img{
+    cursor: pointer;
+    margin-left: 7px;
+    width: 22px;
+    height: 22px;
+}
+.mlhide {
+   /*display: block;*/
+}
+
+/*Landing Page Header Logo*/
+.landing-team-header .user-img{
+    padding: 10px;
+}
+.cursorChange{
+    cursor: inherit ! important;
+}
+.user-change{
+    font-family: ALINSN;
+    color: #fff;
+    display: block;
+    margin-bottom: 0px;
+    font-size: 13px;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+.leagueNone{
+    width: 320px;
+    margin: 10px auto;
+    text-align: center;
+}
+.truncateWord .user-team-name,
+.truncateWord .user-team-status{
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+.mpull label{
+    margin-top: 20px;
+}
+.ll-data ul li{
+    display: inline-block;
+    padding-right: 20px;
+}
+.ll-data ul li label{
+    font-family: ALINSB;
+}
+.ll-data ul li span{
+    font-family: ALINSN;
+}
+.tabelHeight-align{
+     height: 510px !important;
+}
+/*responsive css*/
+@media screen and (max-width: 640px){
+    .verified-msg {
+        height: auto;
+        font-size: 12px;
+        padding: 15px;
+    }
+    .verified-msg .close-notify{
+        font-size: 10px;
+        right: 9px;
+        top: 3px;
+    }
+    .leaguecode-generate{
+        margin-top: 10px;
+    }
+    .user-change{
+        display: none !important;
+    }
+    .leagueNone{
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .text-none{
+        display: none !important;
+    }
+    .playersadded-list span{
+        font-size: 12px;
+    }
+    .dailyTab.stats-header ul li{
+        width: 120px;
+    }
+    .playersadded-list span{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .mpull label {
+        margin-top: 0px;
+    }
+    .body-section {
+        padding: 20px 0px;
+        width: 100%;
+    }
+    body.fantacy-body{
+        height: 100vh;
+    }
+    .padl0,
+    .padr0 {
+        padding: 0px;
+    }
+    .mhide,
+    .reset-btn {
+        display: none !important;
+    }
+    .mshow {
+        display: inline-block !important;
+    }
+    .edit-btn {
+        display: inline-block !important;
+    }
+    .search-tab .search-form {
+        width: 86%;
+        display: inline-block;
+    }
+    body.fantacy-body {
+        padding-bottom: 0px;
+    }
+    .back-option {
+        display: inline-block;
+    }
+    .back-table {
+        display: inline-block;
+        padding: 10px;
+    }
+    .dailychallenge {
+        height: 60px;
+    }
+    .live-score-tab {
+        display: block;
+    }
+    /*table css*/
+    .fixed-table-inner {
+        height: auto !important;
+        margin-bottom: 40px;
+    }
+    .mhideinline {
+        display: none;
+    }
+    .mshowinline {
+        display: inline-block;
+            padding-right: 4px;
+    }
+    /*sidebar*/
+    .overflow-scroll.active {
+        position: fixed;
+        width: 100%;
+    }
+    .testclass{
+        display: inline-block !important;
+    }
+    .join-bottom,
+    .help-home{
+        display: none !important;
+    }
+    .sharecursor {
+        margin-right: 5px;
+    }
+    .mtop{
+       margin-top: 16px;
+    }
+    .new-league .prize{
+        display: none;
+    }
+    .user-details.prize-head {
+        margin-top: 5px !important;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width:1250px) {
+    .table-footer .btn-white,
+    .table-footer .btn-theme {
+        font-size: 10px !important;
+        padding: 7px 10px;
+    }
+    .budget-header ul li label,
+    .budget-header ul li span {
+        font-size: 10px;
+    }
+    .balance-tab ul li span {
+        font-size: 10px;
+    }
+    .help-home{
+    position: relative;
+    top: 6px;
+}
+}
+
+@media screen and (max-width:1200px) {
+    .mlhide {
+       display: none;
+    }
+}
+@media screen and (min-width: 991px) {
+    .truncateWord .user-team-name,
+    .truncateWord .user-team-status{
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+    }
+}
+
+
+/*new css*/
+.track-back.bck-btn{
+    padding: 10px 15px;
+}
+.dailyTab{
+    background-color: #fff;
+    margin: 0px !important;
+    margin-bottom: 15px !important;
+    padding: 15px 0px;
+}
+.dailyTab.stats-header li:nth-child(2) {
+    margin-left: 0px;
+}
+.info-11{
+    background-color: #fff;
+    padding: 10px;
+}
+.info-11 p{
+       font-family: ALINSN;
+       margin-bottom: 0px;
+       font-size: 16px;
+       text-align: center;
+}
+.info-11 label{
+    font-family: ALINSB;
+}
+

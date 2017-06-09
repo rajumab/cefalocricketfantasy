@@ -1,0 +1,20 @@
+<h2 class="team-header text-center" style="color:white;">
+    FANTASY SQUAD
+</h2>
+<div class="squad-wrapper">
+  <div class="current-squad">
+    <div class="player-card" *ngFor="let player of squads" >
+      <span class="player-img dd">
+    <img onerror="this.src='https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/players/rps/Ankit_Sharma.png';" src="https://s3-ap-southeast-1.amazonaws.com/images-fantasy-iplt20/images/players/{{player.teamAbbreviation.toLowerCase()}}/{{player.fullName.replace(' ','_')}}.png">
+</span>
+      <ul>
+        <li><span [ngClass]="player.role[0]"></span></li>
+        <li><span [ngClass]="getplayertype(player)"></span></li>
+        <li>{{player.teamAbbreviation}}</li>
+      </ul>
+      <div class="player-name mhide">{{player.fullName}}</div>
+      <div class="player-name mshow" style="width: 100%;">{{player.shortName}}</div>
+      <div class="player-value">{{player.price}}</div>
+    </div>
+  </div>
+</div>

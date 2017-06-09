@@ -1,0 +1,221 @@
+<style>
+    ng2-tooltip .tooltip-contents {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background:#fff !important;
+}
+    </style>
+<h2 class="team-header text-center" style="color:white;">
+  {{title}}
+</h2>
+   <div class="info-tab">
+        <ul class="list-unstyled">
+            <li>
+                <label [ngClass]="VALIDATION_MANAGER.SQUAD_BALANCE_BATSMAN"></label>
+                <strong>Batsman:</strong>&nbsp; {{currentCombination.batsman}}<br>
+                (min: {{validationRule.SquadBalance.Batsman.MIN}} max: {{validationRule.SquadBalance.Batsman.MAX}})
+            </li>
+            <li>
+                <label [ngClass]="VALIDATION_MANAGER.SQUAD_BALANCE_Bolwer"></label>
+                <strong>Bolwer:</strong>&nbsp; {{currentCombination.bowler}}<br>
+                (min: {{validationRule.SquadBalance.Bolwer.MIN}} max: {{validationRule.SquadBalance.Bolwer.MAX}})
+            </li>
+            <li>
+                <label [ngClass]="VALIDATION_MANAGER.SQUAD_BALANCE_AllRounder"></label>
+                <strong>All Rounder:</strong>&nbsp; {{currentCombination.allrounder}}<br>
+                 (min: {{validationRule.SquadBalance.AllRounder.MIN}} max: {{validationRule.SquadBalance.AllRounder.MAX}})
+            </li>
+            <li>
+                <label [ngClass]="VALIDATION_MANAGER.SQUAD_BALANCE_Keeper"></label>
+                <strong>Keeper:</strong>&nbsp; {{currentCombination.keeper}}<br>
+                (min: {{validationRule.SquadBalance.Keeper.MIN}})
+            </li>
+            <li>
+                <label [ngClass]="VALIDATION_MANAGER.SQUAD_OverseasLimit"></label>
+                <strong>Overseas:</strong>&nbsp; {{currentCombination.overseas}}<br>
+                (max: {{validationRule.OverseasLimit.MAX}})
+            </li>
+            <li>
+                <label [ngClass]="VALIDATION_MANAGER.ElevenPlayer"></label>
+                <strong>Total:</strong>&nbsp; {{currentCombination.totalplayer}}<br>
+                (total: {{validationRule.ElevenPlayer.TOTAL}})
+            </li>
+        </ul>
+    </div>
+<div class="row">
+    <div class="col-md-6">
+        <div [ngClass]="decidebudgetstate()" >
+            <ul class="list-unstyled">
+                <li><label>Budget Left : </label><span> {{totalBudget}}</span></li>
+                <li><label>Subs Left : </label><span> {{subsleft}}</span></li>
+                <li><label>Free Uncapped : </label><span> {{freeuncapped}}</span></li>
+            </ul>
+        </div>
+        <div class="balance-tab">
+        <ul class="list-unstyled">
+                <li ng2-tooltip='
+<div style="background:#fff !important;margin: -5px;
+    padding: 10px;">
+    <div>
+        <div style="width:210px;">
+            <div style="float:left">
+                    Bowler: (min: {{validationRule.SquadBalance.Bolwer.MIN}} max: {{validationRule.SquadBalance.Bolwer.MAX}})
+            </div>   
+            <div style="float:left">
+                  
+                  Keeper: (min: {{validationRule.SquadBalance.Keeper.MIN}})
+            </div>   
+            <div style="clear:both;">
+            </div>
+        </div>
+        <div style="width:210px;">
+            <div style="float:left">
+               
+               Batsman: (min: {{validationRule.SquadBalance.Batsman.MIN}} max: {{validationRule.SquadBalance.Batsman.MAX}})
+            </div>   
+            <div style="float:left">
+                    All Rounder: (min: {{validationRule.SquadBalance.AllRounder.MIN}} max: {{validationRule.SquadBalance.AllRounder.MAX}})
+            </div>   
+            <div style="clear:both;">
+            </div>
+        </div>
+    </div>
+</div>'>
+                <label class="{{VALIDATION_MANAGER.SquadBalance}}"></label><span>Squad Balance</span></li>
+                <li ng2-tooltip='<div style="background:#fff;margin: -5px;
+    padding: 10px;">
+                            <div style="width:200px;">
+                            <div style="float:left">
+                                &nbsp;
+                            </div>   
+                            <div style="float:left">
+                                Total Player: (total: {{validationRule.ElevenPlayer.TOTAL}})
+                            </div>   
+                            <div style="clear:both;">
+                            </div>
+                         </div>
+                         </div>'>
+                    <label class="{{VALIDATION_MANAGER.ElevenPlayer}}"></label><span>Eleven Players</span>
+                </li>
+                 <li ng2-tooltip='<div style="background:#fff;padding: 0px; !important;margin: -5px;
+    padding: 10px;">
+                                    <span> Franchise Spread: (max: {{validationRule.FranchiseSpread.MAX}})</span>
+                                  </div>'>
+                    <label class="{{VALIDATION_MANAGER.FranchiseSpread}}"></label><span>Franchise Spread</span>
+                </li>
+                <li ng2-tooltip='<div style="background:#fff;margin: -5px;
+    padding: 10px;">
+                        <div style="width:200px;">
+                            <div style="float:left">
+                                &nbsp;
+                            </div>   
+                            <div style="float:left">
+                               Overseas: (max: {{validationRule.OverseasLimit.MAX}})
+                            </div>   
+                            <div style="clear:both;">
+                            </div>
+                         </div>
+                         </div>'>
+                    <label class="{{VALIDATION_MANAGER.OverseasLimit}}"></label><span>Overseas Limit</span>
+                </li>
+                <li ng2-tooltip='<div  style="background:#fff;margin: -5px;
+    padding: 10px;">
+                        <div style="width:200px;">
+                            <div style="float:left">
+                                &nbsp;
+                            </div>   
+                            <div style="float:left">
+                               Uncapped: (min: {{validationRule.UncappedQuota.MIN}})
+                            </div>   
+                            <div style="clear:both;">
+                            </div>
+                         </div>
+                         </div>'>
+                    <label class="{{VALIDATION_MANAGER.UncappedQuota}}"></label><span>Uncapped Quota</span>
+                </li>
+            </ul>
+        </div>
+        <div style="height:570px; overflow:auto;" class="table-section">
+            <table style="width:100%">
+                <tr>
+                    <th class="fixed">ROLE</th>
+                    <th>PLAYER</th>
+                    <th>TEAM</th>
+                    <th>COST</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr *ngFor="let player of selectedplayers">
+                    <td><span [ngClass]="player.role[0]"></span></td>
+                    <td>{{player.fullName}}&nbsp;<span [ngClass]="getplayertype(player)"></span></td>
+                    <td>{{player.teamAbbreviation}}</td>
+                    <td>{{player.price}}</td>
+                    <td class="action-close" (click)="removeSelectedPlayer(player)"><span class="close-icon"></span></td>
+                </tr>
+            </table>
+            <div class="table-footer">
+                <div class="pull-right" style="float:right;">
+                    <button  [disabled]="!isValidForm()"  type="button" class="btn btn-theme save-btn" value="Save" (click)="preparesquad()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="search-tab">
+            <form class="navbar-form" role="search">
+            <div class="input-group add-on">
+                <input class="form-control" placeholder="Search with the player name" name="srch-term" style="height:50px;" id="srch-term" type="text" [(ngModel)]="filter.fullName">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+            </form> 
+        </div>
+        <div class="col-md-12 dropdown-tab">
+            <select class="ui dropdown"  [(ngModel)]="filter.role">
+                <option value="allroles">All Roles</option>
+                <option value="batsman">Batsman</option>
+                <option value="keeper">Keeper</option>
+                <option value="allrounder">All Rounder</option>
+                <option value="bowler">Bowler</option>
+            </select>
+            <select class="ui dropdown" [(ngModel)]="filter.nationality">
+                <option value="alltypes">All Types</option>
+                <option value="foreign">Foreign Players</option>
+                <option value="indian">Indian Players</option>
+                <option value="uncapped">Uncapped Players</option>
+            </select>
+            <select class="ui dropdown" [(ngModel)]="filter.teamAbbreviation">
+                <option value="allteams">All Teams</option>
+                <option value="dd">DD</option>
+                <option value="kxip">KXIP</option>
+                <option value="kkr">KKR</option>
+                <option value="mi">MI</option>
+                <option value="kxip">KXIP</option>
+                <option value="srh">SRH</option>
+                <option value="gl">GL</option>
+                <option value="rps">RPS</option>
+            </select>
+        </div>
+        <div style="height:570px; overflow:auto;" class="table-section">
+            <table style="width:100%">
+                <tr>
+                    <th>ROLE</th>
+                    <th>PLAYER</th>
+                    <th>TEAM</th>
+                    <th>COST</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr *ngFor="let player of players |playerfilter:filter">
+                    <td><span [ngClass]="player.role[0]"></span></td>
+                    <td>{{player.fullName}}&nbsp;<span [ngClass]="getplayertype(player)"></span></td>
+                    <td>{{player.teamAbbreviation}}</td>
+                    <td>{{player.price}}</td>
+                    <td class="action-add" (click)="selectplayer(player)"><span class="plus"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<br/>
+ 
+   
